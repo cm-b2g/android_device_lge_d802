@@ -20,10 +20,16 @@
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit from b2g
+$(call inherit-product-if-exists, vendor/cm/config/common_full.mk)
+
+GAIA_DEV_PIXELS_PER_PX := 2.25
+BOOTANIMATION_ASSET_SIZE := 1080p
+
 PRODUCT_DEVICE := d802
 PRODUCT_NAME := full_d802
 PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG-D802
+PRODUCT_MODEL := LG G2 (D802)
 PRODUCT_MANUFACTURER := lge
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
